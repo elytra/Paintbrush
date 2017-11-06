@@ -4,11 +4,11 @@ ext {
 	group = 'com.elytradev'
 	projectName = 'Paintbrush'
 
-	useElytraVersionFormat = true
+	useElytraVersionFormat = false
 	version = '1'
 
 	concreteVersion = '0.3.4-SNAPSHOT'
-	concreteModules = [ 'common' ]
+	concreteModules = [ 'common', 'inventory' ]
 
 	coremod = null
 	miniVersion = null

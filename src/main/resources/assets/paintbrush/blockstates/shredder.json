@@ -1,13 +1,17 @@
 {
     "forge_marker": 1,
     "defaults": {
-    },
-    "variants": {
-        "normal": {
-            "model": "paintbrush:shredder",
+        "model": "paintbrush:shredder",
             "textures": {
                 "0": "paintbrush:blocks/shredder_animated"
-            }
+        }
+    },
+    "variants": {
+        "facing": {
+            "north":{ "y":  0 },
+            "east": { "y": 90 },
+            "south":{ "y":180 },
+            "west": { "y":270 }
         },
         "inventory": {
             "model": "paintbrush:shredder",

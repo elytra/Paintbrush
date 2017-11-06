@@ -5,7 +5,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class ModItems {
 
-    public static ItemBase steelWool = new ItemBase("steel_wool",1);
+    public static ItemBase steelWool = new ItemBase("steel_wool");
 
     public static IItemBase[] allItems = {
             steelWool

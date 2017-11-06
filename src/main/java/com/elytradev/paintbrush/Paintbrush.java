@@ -1,6 +1,7 @@
 package com.elytradev.paintbrush;
 
 import com.elytradev.paintbrush.blocks.ModBlocks;
+import com.elytradev.paintbrush.gui.GuiHandler;
 import com.elytradev.paintbrush.items.ModItems;
 import com.elytradev.paintbrush.proxy.CommonProxy;
 import net.minecraft.block.Block;
@@ -13,6 +14,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 @Mod(modid=Paintbrush.modId, name=Paintbrush.name, version=Paintbrush.version)
 public class Paintbrush {
@@ -25,11 +27,13 @@ public class Paintbrush {
     @SidedProxy(serverSide = "com.elytradev.paintbrush.proxy.CommonProxy",clientSide = "com.elytradev.paintbrush.proxy.ClientProxy")
     public static CommonProxy proxy;
 
+    public static final PaintTab creativeTab = new PaintTab();
+
 
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
-
+        NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
     }
 
     @Mod.EventHandler

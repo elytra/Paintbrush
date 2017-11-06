@@ -5,10 +5,16 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class ModItems {
 
-    public static IItemBase[] allItems = {};
+    public static ItemBase steelWool = new ItemBase("steel_wool",1);
+
+    public static IItemBase[] allItems = {
+            steelWool
+    };
 
     public static void register(IForgeRegistry<Item> registry) {
-        registry.registerAll((Item[]) allItems);
+        for (int i = 0; i < allItems.length ; i++) {
+            registry.register((Item) allItems[i]);
+        }
     }
 
     public static void registerModels() {

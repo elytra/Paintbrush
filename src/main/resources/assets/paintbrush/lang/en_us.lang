@@ -1,0 +1,7 @@
+#blocks
+tile.paintbrush.shredder.name=Shredder
+
+#items
+item.paintbrush.steel_wool.name=Steel Wool
+
+itemGroup.paintbrush=Paintbrush

@@ -20,7 +20,9 @@ public class GuiHandler implements IGuiHandler {
         switch (ID) {
             case SHREDDER:
                 TileEntityShredder shredder = (TileEntityShredder) world.getTileEntity(new BlockPos(x, y, z));
-                return new ShredderContainer(player.inventory, shredder.getContainerInventory(), shredder);
+                ConcreteContainer container = new ShredderContainer(player.inventory, shredder.getContainerInventory(), shredder);
+                container.validate();
+                return container;
             default:
                 return null;
         }
@@ -32,6 +34,7 @@ public class GuiHandler implements IGuiHandler {
         switch (ID) {
             case SHREDDER:
                 ConcreteContainer container = new ShredderContainer(player.inventory, ((IContainerInventoryHolder)world.getTileEntity(new BlockPos(x,y,z))).getContainerInventory(),(TileEntityShredder) world.getTileEntity(new BlockPos(x,y,z)));
+                container.validate();
                 return new ConcreteGui(container);
             default:
                 return null;

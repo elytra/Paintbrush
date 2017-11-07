@@ -75,6 +75,9 @@ public class TileEntityShredder extends TileEntity implements ITickable, IContai
                 currentProcessTime = 0; //reset process time for next item
             }
         }
+        else if(!world.isRemote){
+            currentProcessTime = 0;
+        }
     }
 
     private boolean checkProcess(){

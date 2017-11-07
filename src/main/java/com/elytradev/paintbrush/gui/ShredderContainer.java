@@ -19,8 +19,8 @@ public class ShredderContainer extends ConcreteContainer{
         setRootPanel(panel);
         WItemSlot slotIn = WItemSlot.of(container, 0);
         WItemSlot slotOut = WItemSlot.outputOf(container, 1);
-        panel.add(slotIn, 1, 2);
-        panel.add(slotOut, 7, 2);
+        panel.add(slotIn, 2, 2);
+        panel.add(slotOut, 6, 2);
 
         WItemSlot playerInv = WItemSlot.ofPlayerStorage(player);
         WItemSlot playerHot = WItemSlot.of(player, 0, 9, 1);
@@ -28,6 +28,6 @@ public class ShredderContainer extends ConcreteContainer{
         panel.add(playerHot, 0, 7);
 
         WBar progressTicks = new WBar(arrowBG, arrowFG, container, 0, 1, WBar.Direction.RIGHT);
-        panel.add(progressTicks, 3, 2, 3, 1);
+        panel.add(progressTicks, 3, 2, 2, 1);
     }
 }

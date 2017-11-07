@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "III",
+        "ISI",
+        "IPI"
+    ],
+    "key": {
+        "I": {"item": "minecraft:iron_ingot"},
+        "S": {"item": "minecraft:shears", "data": 0},
+        "P": {"item": "minecraft:heavy_weighted_pressure_plate"}
+    },
+    "result":{"item": "paintbrush:shredder", "count":1}
+}
